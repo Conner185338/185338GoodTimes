@@ -1,6 +1,6 @@
 ﻿/*
  * Conner Warboys
- * Short Form Translator Project
+ * Converts Ottawa time to time in different time zones
  * March 28th, 2019
 */
 using System;
