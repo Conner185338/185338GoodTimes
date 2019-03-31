@@ -35,6 +35,9 @@ namespace _185338GoodTimes
             string TextEntered = txtTime.Text;
             int Ottawa = 0;
             int.TryParse(txtTime.Text, out Ottawa);
+            /* Telling the program how to get the time values of each city
+               based off of Ottawa time
+            */
 
             int Victoria = Ottawa - 300;
             int Edmonton = Ottawa - 200;
@@ -73,6 +76,10 @@ namespace _185338GoodTimes
                 StJohns -= 2400;
             }
             if (Ottawa % 100 > 59) Ottawa = Ottawa - 60 + 100;
+            /* Had to do the oposite of the others when stateing the max time 
+               because Halifax and St'Johns are ahead and not behind so you 
+               have to worry about it going above 2400 and not below 0
+            */
 
 
             lblOuput.Content += Ottawa + " In Ottawa" + "\r" + "\n";
@@ -82,6 +89,9 @@ namespace _185338GoodTimes
             lblOuput.Content += Toronto + " In Toronto" + "\r" + "\n";
             lblOuput.Content += Halifax + " In Halifax" + "\r" + "\n";
             lblOuput.Content += StJohns + " In St. John's" + "\r" + "\n";
+            /* Tells program to show the time value in the specific city for
+               the input that the user added and then adds an new line
+            */
         }
     }
 }
